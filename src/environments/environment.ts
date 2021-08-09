@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  /*URL base da aplicacao armazenada no repositorio do Heroku*/
+  baseUrl: "https://minhalivraria-api.herokuapp.com",
 };
 
 /*
