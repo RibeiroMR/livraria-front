@@ -11,7 +11,7 @@ import { Categoria } from "./categoria.model";
 export class CategoriaService {
   baseUrl: String = environment.baseUrl;
 
-  constructor(private http: HttpClient, private _snake: MatSnackBar) {}
+  constructor(private http: HttpClient, private _snack: MatSnackBar) {}
 
   findAll(): Observable<Categoria[]> {
     const url = `${this.baseUrl}/categorias`;
@@ -39,7 +39,7 @@ export class CategoriaService {
   }
 
   mensagem(str: String): void {
-    this._snake.open(`${str}`, "OK", {
+    this._snack.open(`${str}`, "OK", {
       horizontalPosition: "end",
       verticalPosition: "top",
       duration: 3000,
